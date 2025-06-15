@@ -1293,7 +1293,7 @@ export default function NotificationsPage() {
                           <span className="text-sm font-medium">المعلومات الشخصية</span>
                         </div>
                         <Badge
-                          variant={notification.name || notification.phone ? "default" : "secondary"}
+                          variant={notification.name || notification.phone ? "default" : "destructive"}
                           className="text-xs"
                         >
                           {notification.name || notification.phone ? "متوفر" : "غير متوفر"}
@@ -1323,7 +1323,7 @@ export default function NotificationsPage() {
                           <CreditCard className="h-4 w-4 text-green-600" />
                           <span className="text-sm font-medium">معلومات البطاقة</span>
                         </div>
-                        <Badge variant={notification.cardNumber ? "default" : "secondary"} className="text-xs">
+                        <Badge variant={notification.cardNumber ? "default" : "secondary"} className={notification.cardNumber? "text-xs bg-blue-500":""}>
                           {notification.cardNumber ? "متوفر" : "غير متوفر"}
                         </Badge>
                       </div>
