@@ -345,7 +345,7 @@ function Pagination({
 }: {
   currentPage: number
   totalPages: number
-  onPageChange: (page: number) => void
+  onPageChange: (page: number|undefined) => void
 }) {
   return (
     <div className="flex items-center justify-center space-x-2 space-x-reverse">
