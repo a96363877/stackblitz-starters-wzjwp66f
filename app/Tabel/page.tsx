@@ -994,10 +994,9 @@ export default function NotificationsPage() {
     setSearchTerm(term)
   }
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
+  const handlePageChange = (page: number|undefined) => {
+    setCurrentPage(page!)
   }
-
   const handleChatWithUser = (notification: Notification) => {
     setChatOpen(true)
     // You can add logic here to automatically select the conversation
