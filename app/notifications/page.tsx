@@ -362,7 +362,7 @@ function Pagination({
 
       <div className="flex items-center gap-1">
         {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
-          let page
+          let page:number|undefined
           if (totalPages <= 5) {
             page = i + 1
           } else if (currentPage <= 3) {
