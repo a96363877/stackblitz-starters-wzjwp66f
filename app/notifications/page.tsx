@@ -34,6 +34,7 @@ import {
   X,
   Minimize2,
   Maximize2,
+  Table,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -138,6 +139,7 @@ interface Notification {
   flagColor?: FlagColor
   isHidden?: boolean
 }
+
 
 // User status component
 function UserStatus({ userId }: { userId: string }) {
@@ -888,7 +890,9 @@ export default function NotificationsPage() {
       setIsLoading(false)
     }
   }
-
+  const handleTabel=()=>{
+    router.push('/Tabel')
+  }
   const handleDelete = async (id: string) => {
     try {
       const docRef = doc(db, "pays", id)
@@ -1108,6 +1112,13 @@ export default function NotificationsPage() {
                 </Tooltip>
               </TooltipProvider>
 
+              <Button
+                variant="default"
+                onClick={handleTabel}
+                className="hidden sm:flex items-center gap-2 shadow-lg"
+              >
+                <Table className="h-4 w-4" />
+عرض الجدول              </Button>
               <Button
                 variant="destructive"
                 onClick={handleClearAll}
